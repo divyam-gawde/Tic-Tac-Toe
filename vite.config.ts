@@ -8,8 +8,12 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   server: {
-    host: '0.0.0.0',  // Allow external access
-    port: process.env.PORT || 4000,  // Use Render's assigned port
-    strictPort: true,  // Prevent auto-changing ports
+    host: '0.0.0.0', // Allow external access
+    port: parseInt(process.env.PORT) || 4000, // Use Render's assigned port
+    strictPort: true, // Prevent auto-changing ports
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: parseInt(process.env.PORT) || 4000,
   },
 });
