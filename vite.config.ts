@@ -9,11 +9,11 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0', // Allow external access
-    port: parseInt(process.env.PORT) || 4000, // Use Render's assigned port
+    port: process.env.PORT || 4000, // Use Render's assigned port or default to 4000
     strictPort: true, // Prevent auto-changing ports
   },
   preview: {
-    host: '0.0.0.0',
-    port: parseInt(process.env.PORT) || 4000,
+    host: '0.0.0.0',  // Allow external access
+    port: process.env.PORT || 4000,  // Use Render's assigned port or default to 4000
   },
 });
